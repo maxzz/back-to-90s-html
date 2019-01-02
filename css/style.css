@@ -3,3 +3,15 @@
     font-family: 'Architects Daughter', cursive;
     color: white;
 }
+
+.table-wrap {
+    margin: 0 auto;
+}
+
+td {
+    max-width: 30vmin;
+}
+
+img {
+    width: 100%;
+}
