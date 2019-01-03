@@ -1,7 +1,33 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    font-family: 'Architects Daughter', cursive;
+}
+
+:root {
+  --sa: 1;
+  --br: 1;
+}
+
 .header {
     background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
-    font-family: 'Architects Daughter', cursive;
     color: white;
+}
+
+.header h1 {
+    color: white;
+}
+
+h1 {
+    color: #2e7bcf;
+    border-bottom: 1px solid #2e7bcf;
+    padding-bottom: 0;
+}
+
+.content-wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 70vmin;
 }
 
 .table-wrap {
@@ -12,6 +38,15 @@ td {
     max-width: 30vmin;
 }
 
-img {
+table img {
+    /* width: 100%; */
+    filter: saturate(var(--sa)) brightness(var(--br));
+}
+
+svg foreignObject {
+    background-color: red;
+}
+
+foreignObject img {
     width: 100%;
 }
