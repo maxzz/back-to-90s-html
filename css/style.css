@@ -43,9 +43,9 @@ table img {
     filter: saturate(var(--sa)) brightness(var(--br));
 }
 
-svg foreignObject {
+/* svg foreignObject {
     background-color: red;
-}
+} */
 
 foreignObject img {
     width: 100%;
