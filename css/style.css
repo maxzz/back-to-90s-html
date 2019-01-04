@@ -27,7 +27,8 @@ h1 {
 .content-wrapper {
     position: relative;
     margin: 0 auto;
-    /* width: 70vmin; */
+    width: 90 vmin;
+    max-width: 1200px;
 }
 
 /* .table-wrap {
@@ -46,12 +47,18 @@ table img {
 
 /* SVG */
 
-#tabsq {
+.s-tab {
     fill: #fff;
     opacity: 0.71;
+    transition: fill .2s ease-out;
 }
 
-#tab {
+.s-tab-active {
+    fill: #0081ff5e;
+    opacity: 1;
+}
+
+.c-tab {
     fill: #e1eaf7;
     stroke: #e6e6e6;
     stroke-miterlimit: 10;
