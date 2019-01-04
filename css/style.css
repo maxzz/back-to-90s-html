@@ -27,20 +27,35 @@ h1 {
 .content-wrapper {
     position: relative;
     margin: 0 auto;
-    width: 70vmin;
+    /* width: 70vmin; */
 }
 
-.table-wrap {
+/* .table-wrap {
     margin: 0 auto;
 }
 
 td {
     max-width: 30vmin;
-}
+} */
 
 table img {
     /* width: 100%; */
     filter: saturate(var(--sa)) brightness(var(--br));
+}
+
+
+/* SVG */
+
+#tabsq {
+    fill: #fff;
+    opacity: 0.71;
+}
+
+#tab {
+    fill: #e1eaf7;
+    stroke: #e6e6e6;
+    stroke-miterlimit: 10;
+    opacity: 0.21;
 }
 
 /* svg foreignObject {
@@ -50,3 +65,5 @@ table img {
 foreignObject img {
     width: 100%;
 }
+
+/* SVG end */
