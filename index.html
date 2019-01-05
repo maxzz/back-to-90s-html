@@ -20,7 +20,7 @@
             <p>A long time ago I developed interfaces for company that does not exist anymore, but memories are there.</p>
             <p>It was dark age of the squered windows on Windows 95. Everithing in UI was flat and squared. We had a lot of fan. I still love this design.</p>
     
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 770.12 588.2">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 770.12 588.2">
             <defs>
                 <symbol id="tab" data-name="tab" viewBox="0 0 216 172">
                     <path d="M198.62,161.43a54.8,54.8,0,0,1-10.13,5.22c-5.36,2.15-14.45,1.85-20.2,2.78a122.48,122.48,0,0,1-23.92,1.35c-36.77-1.06-84.58,5.76-118.78-8.6C-.46,151.25-.18,121.6.83,97.39c.95-22.8-2.62-46,2.84-68.52C9.26,5.84,32.49.95,53.11.54c25-.5,49.15,3.85,74.27,3.84,17,0,34,1.25,50.88.76,11.92-.35,26.34-.8,33.51,11.46,6.21,10.62,2.78,29.19,2.86,40.91l.33,51.73C215.1,132.19,215.91,149.87,198.62,161.43Z"/>
@@ -61,15 +61,16 @@
                     </foreignObject>
                 </g>
 
-                <!-- <rect id="workArea" x="157.05" y="125.21" width="455" height="337.77" fill="none" stroke="#000" stroke-miterlimit="10"/> -->
+                <rect id="workArea" x="157.05" y="125.21" width="455" height="338" fill="none" stroke="#000" stroke-miterlimit="10"/>
 
-                <foreignObject x="157.05" y="125.21" width="455" height="337.77">
-                    <div id="tab1" style="display: none">
+                <foreignObject x="157.05" y="125.21" width="455" height="338">
+                    <div style="position: relative">
+                    <div id="tab1" class="tab">
                         <div style="display:table-cell; vertical-align:middle; text-align:center;">
                             <img src="images/app/image008.png" style="width: 90%; margin: 2%" alt="UI picture">
                         </div>
                     </div>
-                    <div id="tab2" style="display: none">
+                    <div id="tab2" class="tab">
                         <div style="display: flex; flex-direction: column; height: 100%; width: 100%; position: relative;">
                             <div style="width: 70%; margin: 0.2em auto"> <img src="images/app/image010.png" alt="UI picture"></div>
                             <div style="display: flex;">
@@ -78,7 +79,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="tab4" style="display: none">
+                    <div id="tab4" class="tab">
                         <div style="display: flex; flex-direction: column; height: 100%; width: 100%; position: relative;">
                             <div style="width: 70%; margin: 0.6em auto"> <img src="images/app/image009.png" alt="UI picture"></div>
                             <div style="display: flex">
@@ -88,17 +89,50 @@
                             </div>
                         </div>
                     </div>
-                    <div id="tab3" style="display: none">
+                    <div id="tab3" class="tab">
                         <div style="margin-top: 3%; vertical-align:middle; text-align:center;">
                             <img src="images/app/image006.png" style="width: 90%; margin: 2%">
                         </div>
                     </div>
+                    </div>
                 </foreignObject>                
             </g>
-            </svg>
+            </svg> -->
 
         </section>
     </div>
+
+    <div style="position: relative">
+        <div id="tab1" class="tab">
+            <div style="display:table-cell; vertical-align:middle; text-align:center;">
+                <img src="images/app/image008.png" style="width: 90%; margin: 2%" alt="UI picture">
+            </div>
+        </div>
+        <div id="tab2" class="tab">
+            <div style="display: flex; flex-direction: column; height: 100%; width: 100%; position: relative;">
+                <div style="width: 70%; margin: 0.2em auto"> <img src="images/app/image010.png" alt="UI picture"></div>
+                <div style="display: flex;">
+                    <div> <img src="images/app/image011.png" alt="UI picture"></div>
+                    <div> <img src="images/app/image012.png" alt="UI picture"></div>
+                </div>
+            </div>
+        </div>
+        <div id="tab4" class="tab">
+            <div style="display: flex; flex-direction: column; height: 100%; width: 100%; position: relative;">
+                <div style="width: 70%; margin: 0.6em auto"> <img src="images/app/image009.png" alt="UI picture"></div>
+                <div style="display: flex">
+                    <div> <img src="images/app/image003.png" alt="UI picture"></div>
+                    <div> <img src="images/app/image004.png" alt="UI picture"></div>
+                    <div> <img src="images/app/image005.png" alt="UI picture"></div>
+                </div>
+            </div>
+        </div>
+        <div id="tab3" class="tab">
+            <div style="margin-top: 3%; vertical-align:middle; text-align:center;">
+                <img src="images/app/image006.png" style="width: 90%; margin: 2%">
+            </div>
+        </div>
+        </div>
 
     <script>
         // Camera Allpications. Rotating Circle
@@ -129,17 +163,22 @@
 
         function setTab(n, active) {
             let tab = ui[n];
-            tab.large.style.display = active ? 'block' : 'none';
 
-            let uiSq = tab.preview.querySelector('.s-tab');
+            //let uiSq = tab.preview.querySelector('.s-tab');
             
             if (active) {
-                uiTitle.innerHTML = tab.text;
-                tab.preview.style.opacity = '1';
-                uiSq.classList.add('s-tab-active');
+//                uiTitle.innerHTML = tab.text;
+                //tab.preview.style.opacity = '1';
+
+                //tab.large.classList.remove('tab');
+                tab.large.classList.add('tab-active');
+//                uiSq.classList.add('s-tab-active');
             } else {
-                tab.preview.style.opacity = '.2';
-                uiSq.classList.remove('s-tab-active');
+                //tab.preview.style.opacity = '.2';
+
+                //tab.large.classList.add('tab');
+                tab.large.classList.remove('tab-active');
+//                uiSq.classList.remove('s-tab-active');
             }
         }
 
@@ -160,7 +199,7 @@
             }, 2000);
         }
 
-        setTabs(0);
+        setTabs(2);
         main();
 
 
