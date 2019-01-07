@@ -56,8 +56,12 @@ table img {
     /* <foreignObject x="157.05" y="125.21" width="455" height="338"> */
     /* transform-origin: 383px 289px; */
     /* transform-origin: 0 0; */
-    transform-origin: top left;
+    /* transform-origin: top left; */
+    transform-origin: bottom right;
     background-color: green;
+    transform-box: view-box;
+    /* transform-box: fill-box; */
+        /* https://bugzilla.mozilla.org/show_bug.cgi?id=1209061 */
 
     /* position: absolute;
     top: 0;
@@ -67,6 +71,10 @@ table img {
 
     /* margin: 0;
     opacity: 0.71; */
+}
+
+.tab-frame {
+    border: 1px solid orange;
 }
 
 /* #tab1 {
@@ -89,6 +97,7 @@ table img {
     transform: scale(1);
     /* transform-origin: 300px 300px; */
     /* display: block; */
+    transform-box: view-box;
 }
 
 .tab img, .tab-active img  {
