@@ -80,9 +80,9 @@ header p {
 }
 
 #countdown {
+    padding-bottom: 0;
     font-size: 1em;
     color: white;
     text-shadow: 1px 1px 1px #363636;
-    transition: 1s font-size;
-    padding-bottom: 0;
+    transition: 1s transform;
 }
