@@ -72,6 +72,13 @@ header p {
     filter: none;
 }
 
+.countdown-wrap {
+    position: relative;
+    height: 3.4em;
+    display: grid;
+    place-items: center;
+}
+
 #countdown {
     font-size: 1em;
     color: white;

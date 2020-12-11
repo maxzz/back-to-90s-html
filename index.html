@@ -21,7 +21,9 @@
             <p>A long time ago I developed interfaces for a company that no longer exists, but the memories remain.</p>
             <p>It was the dark age of square windows in Windows 95. Everything about the user interface was flat, square, and boring. I was lucky enough to convince the management to add a little fun, and it was the right decision at the time. I still love this design.</p>
 
-            <p id="countdown">:</p>
+            <div class="countdown-wrap">
+                <p id="countdown">:</p>
+            </div>
         </header>
 
         <section class="container">
@@ -77,11 +79,11 @@
             let counter = 1;
 
             // hide all
-            for await (let img of images) {
-                await delay(400);
-                showCounter(counter++);
-                popup(img, false);
-            }
+            // for await (let img of images) {
+            //     await delay(400);
+            //     showCounter(counter++);
+            //     popup(img, false);
+            // }
 
             // random popup
             let cycles = 3; //images.length
