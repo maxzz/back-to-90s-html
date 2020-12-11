@@ -78,7 +78,11 @@
                 await delay(1000);
 
                 popup(images[prev], false);
-                prev = random();
+                let i = random();
+                while (i === prev) {
+                    i = random();
+                }
+                prev = i;
                 popup(images[prev], true);
             }
 
