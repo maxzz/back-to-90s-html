@@ -24,8 +24,8 @@ body {
     min-height: 100vh;
 
     color: white;
-    /* font-family: 'Architects Daughter', cursive; */
-    font-family: Kalam;
+    font-family: 'Architects Daughter', cursive;
+    /* font-family: Kalam; */
 }
 
 main {
