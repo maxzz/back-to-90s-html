@@ -36,9 +36,14 @@ header {
     color: #1b0202;
 }
 
-h1 {
+/* h1 {
     font-size: 3em;
     text-shadow: 1px 1px 1px #9f9db1;
+} */
+
+#title {
+    transition: 3s filter;
+    filter: grayscale(100%);
 }
 
 header p {

@@ -16,7 +16,7 @@
     <main>
         <header>
             <!-- <h1>Back to the 90's ...</h1> -->
-            <img src="images/title.svg" alt="title" style="filter: grayscale(100%)">
+            <img id="title" src="images/title.svg" alt="title">
             
             <p>A long time ago I developed interfaces for a company that no longer exists, but the memories remain.</p>
             <p>It was the dark age of square windows in Windows 95. Everything about the user interface was flat, square, and boring. I was lucky enough to convince the management to add a little fun, and it was the right decision at the time. I still love this design.</p>
@@ -106,6 +106,9 @@
             await delay(400);
             countdown.innerText = `That's all Folks`;
             countdown.style.transform = 'scale(2)';
+
+            await delay(400);
+            title.style.filter = 'grayscale(0)';
         }
         run();
     </script>
