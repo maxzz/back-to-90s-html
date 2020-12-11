@@ -44,21 +44,23 @@
             return Math.floor(Math.random() * images.length); // [0..lenght|
         }
 
-        function popup(index, on) {
-            const c = images[index].classList;
-            c[on ? 'add' : 'remove']('popup');
-            c[on ? 'remove' : 'add']('normal');
-        }
-
-        popup(prev, true);
-
         function delay(ms) {
             return new Promise((resolve) => setTimeout(resolve, ms));
         }
 
+        function popup(image, on) {
+            const c = image.classList;
+            c[on ? 'add' : 'remove']('popup');
+            c[on ? 'remove' : 'add']('normal');
+        }
+
         async function run() {
-            await delay(1000);
-            images.forEach((_, idx) => popup(idx, false));
+            for await (let img of images) {
+                await delay(200);
+                popup(img, false);
+            }
+
+            popup(images[prev], true);
         }
 
         run();
