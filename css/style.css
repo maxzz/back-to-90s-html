@@ -46,6 +46,14 @@ header {
     filter: grayscale(100%);
 }
 
+.thatsall {
+    height: 30px;
+}
+
+.thatsall path {
+    display: none;
+}
+
 header p {
     padding-bottom: 1em;
 }
