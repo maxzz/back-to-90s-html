@@ -64,17 +64,24 @@
             }
         }
 
+        function showCounter(num) {
+            countdown.innerText = `${num}`;
+        }
+
         async function run() {
+            let counter = 1;
+
             // hide all
             for await (let img of images) {
                 await delay(400);
+                showCounter(counter++);
                 popup(img, false);
             }
 
             // random popup
-            let cycles = images.length;
+            let cycles = 3; //images.length
             for await (let cycle of timeline(cycles)) {
-                countdown.innerText = `${cycles - cycle}`;
+                showCounter(cycles - cycle);
                 await delay(1000);
 
                 popup(images[prev], false);
@@ -87,7 +94,8 @@
             }
 
             // show all
-            countdown.innerText = `:`;
+            countdown.innerText = `That's all Folks`;
+            countdown.style.fontSize = '3em';
             images.forEach(image => (popup(image, false), image.style.filter = 'none', image.style.opacity = '1'));
         }
         run();
