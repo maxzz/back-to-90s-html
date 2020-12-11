@@ -5,196 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
-    <title>New layout</title>
-    <style>
-        *, *::after, *::before {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            position: relative;
-
-            --c1: rgba(193, 193, 202, 0.2);
-            --c2: rgba(183, 184, 189, 0.185);
-
-            background-color:#011441;
-            background-image:
-                linear-gradient(var(--c1) 1px, transparent 1px),
-                linear-gradient(90deg, var(--c1) 1px, transparent 1px),
-                linear-gradient(var(--c2) 1px, transparent 1px),
-                linear-gradient(90deg, var(--c2) 1px, transparent 1px);
-            background-size: 200px 200px, 200px 200px, 20px 20px, 20px 20px;
-            background-position:-1px -1px, -1px -1px, -1px -1px, -1px -1px;
-        }
-        .m-body {
-            position: relative;
-            margin: 20px auto;
-            width: 90%;
-
-            color: white;
-            font-family: 'Architects Daughter', cursive;
-        }
-        h1 {
-            color: white;
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 100px 100px;
-            grid-gap: 1em;
-        }
-        .grid-item {
-            /* background-color: white; */
-            position: relative;
-        }
-        .grid-item-body {
-            /* background-color: pink; */
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            width: 80%;
-            height: 80%;
-            z-index: 2;
-        }
-
-        /* .grid-item-body::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            background-color: rgba(0, 255, 0, .7);
-        } */
-
-        .grid-item-body img {
-            width: 100%
-        }
-
-    </style>
-    <style>
-        /* before loading https://css3gen.com/css3-animation/ */
-        #spinner {
-            margin: 0 auto;
-            top: 50%;
-            width: 40px;
-            height: 40px;
-            position: relative;
-            text-align: center;
-            animation: sk-rotate 2s infinite linear;
-
-            display: none;
-        }
-
-        .dot1, .dot2 {
-            width: 60%;
-            height: 60%;
-            display: inline-block;
-            position: absolute;
-            top: 0;
-            background-color: #f49b1e;
-            border-radius: 100%;
-            animation: sk-bounce 2s infinite ease-in-out;
-        }
-
-        .dot2 {
-            top: auto;
-            bottom: 0;
-            animation-delay: -1s;
-        }
-
-        @keyframes sk-rotate {
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes sk-bounce{
-            0%, 100% {
-                transform: scale(0);
-            }
-            50% {
-                transform: scale(1);
-            }
-        }
-
-    </style>
+    <title>Back to 90's</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div id="spinner">
-        <div class="dot1"></div>
-        <div class="dot2"></div>
-    </div>
+<body class="blueprint">
+    <main>
+        <header>
+            <h1>Back to 90's ...</h1>
+            
+            <p>A long time ago I developed interfaces for a company that no longer exists, but the memories remain.</p>
+            <p>It was the dark age of square windows in Windows 95. Everything about the user interface was flat, square, and boring. I was lucky enough to convince the management to add a little fun, and it was the right decision at the time. I still love this design.</p>
+        </header>
 
-    <div class="m-body">
-        <h1>Back to 90's ...</h1>
-        <section>
-            <p>A long time ago I developed interfaces for company that does not exist anymore, but memories are there.</p>
-            <p>It was dark age of the squered windows on Windows 95. Everithing in UI was flat and squared. We had a lot of fan. I still love this design.</p>
-        </section>
-
-        <br>
-
-        <div class="container">
+        <section class="container">
             <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image001.png" alt="UI picture"> </div></div>
             <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image002.png" alt="UI picture"> </div></div>
-            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image003.png" alt="UI picture"> </div></div>
-            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image004.png" alt="UI picture"> </div></div>
-            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image005.png" alt="UI picture"> </div></div>
             <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image006.png" alt="UI picture"> </div></div>
+
+            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image003.png" alt="UI picture"> </div></div>
+            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image005.png" alt="UI picture"> </div></div>
+            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image004.png" alt="UI picture"> </div></div>
+
+            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image014.png" alt="UI picture"> </div></div>
             <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image008.png" alt="UI picture"> </div></div>
+            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image011.png" alt="UI picture"> </div></div>
+
             <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image009.png" alt="UI picture"> </div></div>
             <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image010.png" alt="UI picture"> </div></div>
-            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image011.png" alt="UI picture"> </div></div>
             <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image012.png" alt="UI picture"> </div></div>
-            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image013.png" alt="UI picture"> </div></div>
-            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image014.png" alt="UI picture"> </div></div>
-        </div>
-    </div>
+        </section>
+    </main>
 
-
-    <!-- <canvas id="myCanvas" width="578" height="200"></canvas>
     <script>
-        var canvas = document.getElementById('myCanvas');
-        var ctx = canvas.getContext('2d');
-        var rectWidth = 150;
-        var rectHeight = 75;
-        canvas.style.backgroundColor = "white";
+        let images = [...document.querySelectorAll('.grid-item-body > img')];
+        let prev = 1;
 
-        // translate ctx to center of canvas
-        ctx.translate(canvas.width / 2, canvas.height / 2);
+        function random() {
+            return Math.floor(Math.random() * images.length); // [0..lenght|
+        }
 
-        ctx.rotate(Math.PI / 2);
-        // scale y component
-        //ctx.scale(1, 0.5);
+        function popup(index, on) {
+            const c = images[index].classList;
+            c[on ? 'add' : 'remove']('popup');
+            c[on ? 'remove' : 'add']('normal');
+        }
 
-        ctx.fillStyle = 'blue';
-        ctx.fillRect(rectWidth / -2, rectHeight / -2, rectWidth, rectHeight);
+        popup(prev, true);
 
-        //
-        ctx.setTransform(1, 0, 0, 1, 0, 0);
-        ctx.font = "28pt Helvetica";
-        ctx.fillStyle = "blue";
-        ctx.fillText("Reflection", 0, 100);
-        ctx.setTransform(1, 0, 0, -1, 0, 0);
-        ctx.fillStyle = "red";
-        ctx.fillText("Reflection", 0, -100);
+        function delay(ms) {
+            return new Promise((resolve) => setTimeout(resolve, ms));
+        }
 
-        //
-        ctx.setTransform(1, 0, 0, 1, 0, 0);
-        ctx.font = "28pt Helvetica";
-        ctx.fillStyle = "blue";
-        ctx.fillText("Reflection", 380, 100);
+        async function run() {
+            await delay(1000);
+            images.forEach((_, idx) => popup(idx, false));
+        }
 
-        ctx.setTransform(1, 0, 0, -1, 0, 0);
-        ctx.scale(1, 1.5);
-        var grad = ctx.createLinearGradient(0, -50, 0, -140);
-        grad.addColorStop(0, 'blue');
-        grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
-        ctx.fillStyle = grad;
-        ctx.fillText("Reflection", 380, -102 / 1.5);            
-    </script> -->
+        run();
+    </script>
 
 </body>
 </html>

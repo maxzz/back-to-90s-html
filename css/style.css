@@ -1,133 +1,72 @@
 *, *::after, *::before {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.blueprint {
+    --c1: #23ca8733;
+    --c2: var(--c1);
+    background-color:slategray;
+
+    background-image:
+        linear-gradient(var(--c1) 1px, transparent 1px),
+        linear-gradient(90deg, var(--c1) 1px, transparent 1px),
+
+        linear-gradient(var(--c2) 1px, transparent 1px),
+        linear-gradient(90deg, var(--c2) 1px, transparent 1px);
+        
+    background-size: 200px 200px, 200px 200px, 20px 20px, 20px 20px;
+    background-position:-1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+body {
+    min-height: 100vh;
+
+    color: white;
     font-family: 'Architects Daughter', cursive;
 }
 
-:root {
-  --sa: 1;
-  --br: 1;
+main {
+    padding: 3em;
 }
 
-.header {
-    background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
-    color: white;
-}
-
-.header h1 {
-    color: white;
+header {
+    color: #1b0202;
 }
 
 h1 {
-    color: #2e7bcf;
-    border-bottom: 1px solid #2e7bcf;
-    padding-bottom: 0;
+    font-size: 3em;
+    text-shadow: 1px 1px 1px #9f9db1;
 }
 
-.content-wrapper {
-    position: relative;
-    margin: 0 auto;
-    width: 90vmin;
-    max-width: 1200px;
+header p {
+    padding-bottom: 1em;
 }
 
-/* .table-wrap {
-    margin: 0 auto;
+.container {
+    margin-top: .4em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-gap: 1em;
+    place-items: center;
 }
 
-td {
-    max-width: 30vmin;
-} */
-
-table img {
-    /* width: 100%; */
-    filter: saturate(var(--sa)) brightness(var(--br));
-}
-
-
-/* SVG */
-
-.tab {
-    transform: scale(0);
-    /* display: none; */
-    transition: transform 1.5s;
-
-    /* transform-origin: 455px 338px; */
-    /* <foreignObject x="157.05" y="125.21" width="455" height="338"> */
-    /* transform-origin: 383px 289px; */
-    /* transform-origin: 0 0; */
-    /* transform-origin: top left; */
-    transform-origin: bottom right;
-    background-color: green;
-    transform-box: view-box;
-    /* transform-box: fill-box; */
-        /* https://bugzilla.mozilla.org/show_bug.cgi?id=1209061 */
-
-    /* position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px; */
-
-    /* margin: 0;
-    opacity: 0.71; */
-}
-
-.tab-frame {
-    border: 1px solid orange;
-}
-
-/* #tab1 {
-    transform-origin: center;
-}
-
-#tab2 {
-    transform-origin: center;
-}
-
-#tab3 {
-    transform-origin: center;
-}
-
-#tab4 {
-    transform-origin: center;
-} */
-
-.tab-active {
-    transform: scale(1);
-    /* transform-origin: 300px 300px; */
-    /* display: block; */
-    transform-box: view-box;
-}
-
-.tab img, .tab-active img  {
+.grid-item-body img {
     width: 100%;
+    transition: .4s transform;
 }
 
-.s-tab {
-    fill: #fff;
-    opacity: 0.71;
-    transition: fill .2s ease-out, opacity 1s;
+.grid-item-body img:hover {
+    transform: scale(1.2);
+    filter: none;
 }
 
-.s-tab-active {
-    fill: #0081ff5e;
-    opacity: 1;
+.normal {
+    filter: grayscale(100%);
 }
 
-.c-tab {
-    fill: #e1eaf7;
-    stroke: #e6e6e6;
-    stroke-miterlimit: 10;
-    opacity: 0.21;
+.popup {
+    transform: scale(1.2);
+    filter: none;
 }
-
-/* svg foreignObject {
-    background-color: red;
-} */
-
-foreignObject img {
-    width: 100%;
-}
-
-/* SVG end */
