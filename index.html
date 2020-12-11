@@ -54,6 +54,7 @@
             const c = image.classList;
             c[on ? 'add' : 'remove']('popup');
             c[on ? 'remove' : 'add']('normal');
+            image.style.opacity = on ? '1' : '.2';
         }
 
         async function* timeline(num) {
@@ -83,7 +84,7 @@
 
             // show all
             countdown.innerText = `:`;
-            images.forEach(img => (popup(img, false), img.style.filter = 'none'));
+            images.forEach(image => (popup(image, false), image.style.filter = 'none', image.style.opacity = '1'));
         }
         run();
     </script>
