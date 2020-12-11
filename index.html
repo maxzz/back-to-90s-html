@@ -79,14 +79,14 @@
             let counter = 1;
 
             // hide all
-            // for await (let img of images) {
-            //     await delay(400);
-            //     showCounter(counter++);
-            //     popup(img, false);
-            // }
+            for await (let img of images) {
+                await delay(400);
+                showCounter(counter++);
+                popup(img, false);
+            }
 
             // random popup
-            let cycles = 3; //images.length
+            let cycles = images.length;
             for await (let cycle of timeline(cycles)) {
                 showCounter(cycles - cycle);
                 await delay(1000);
@@ -101,9 +101,11 @@
             }
 
             // show all
+            images.forEach(image => (popup(image, false), image.style.filter = 'none', image.style.opacity = '1'));
+
+            await delay(400);
             countdown.innerText = `That's all Folks`;
             countdown.style.transform = 'scale(2)';
-            images.forEach(image => (popup(image, false), image.style.filter = 'none', image.style.opacity = '1'));
         }
         run();
     </script>
