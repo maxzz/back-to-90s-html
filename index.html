@@ -15,12 +15,14 @@
             
             <p>A long time ago I developed interfaces for a company that no longer exists, but the memories remain.</p>
             <p>It was the dark age of square windows in Windows 95. Everything about the user interface was flat, square, and boring. I was lucky enough to convince the management to add a little fun, and it was the right decision at the time. I still love this design.</p>
+
+            <p id="countdown">:</p>
         </header>
 
         <section class="container">
-            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image001.png" alt="UI picture"> </div></div>
-            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image002.png" alt="UI picture"> </div></div>
             <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image006.png" alt="UI picture"> </div></div>
+            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image002.png" alt="UI picture"> </div></div>
+            <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image001.png" alt="UI picture"> </div></div>
 
             <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image003.png" alt="UI picture"> </div></div>
             <div class="grid-item"><div class="grid-item-body"> <img src="images/app/image005.png" alt="UI picture"> </div></div>
@@ -54,15 +56,35 @@
             c[on ? 'remove' : 'add']('normal');
         }
 
+        async function* timeline(num) {
+            let i = 0;
+            while (i < num) {
+                yield i++;
+            }
+        }
+
         async function run() {
+            // hide all
             for await (let img of images) {
-                await delay(200);
+                await delay(400);
                 popup(img, false);
             }
 
-            popup(images[prev], true);
-        }
+            // random popup
+            let cycles = images.length;
+            for await (let cycle of timeline(cycles)) {
+                countdown.innerText = `${cycles - cycle}`;
+                await delay(1000);
 
+                popup(images[prev], false);
+                prev = random();
+                popup(images[prev], true);
+            }
+
+            // show all
+            countdown.innerText = `:`;
+            images.forEach(img => (popup(img, false), img.style.filter = 'none'));
+        }
         run();
     </script>
 
