@@ -95,6 +95,8 @@
             countdown.innerText = `${num}`;
         }
 
+        const SHORT = true;
+
         async function run2() {
             const paths = document.querySelectorAll('.thatsall path');
 
@@ -109,14 +111,16 @@
             let counter = 1;
 
             // hide all
-            for await (let img of images) {
-                await delay(400);
-                showCounter(counter++);
-                popup(img, false);
+            if (!SHORT) {
+                for await (let img of images) {
+                    await delay(400);
+                    showCounter(counter++);
+                    popup(img, false);
+                }
             }
 
             // random popup
-            let cycles = images.length;
+            let cycles = SHORT ? 3 : images.length;
             for await (let cycle of timeline(cycles)) {
                 showCounter(cycles - cycle);
                 await delay(1000);

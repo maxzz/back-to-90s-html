@@ -78,6 +78,7 @@ header p {
 
 .normal {
     filter: grayscale(100%);
+    animation: hide-card 2s;
 }
 
 .popup {
@@ -98,4 +99,16 @@ header p {
     color: white;
     text-shadow: 1px 1px 1px #363636;
     transition: 1s transform;
+}
+
+@keyframes hide-card {
+    20% {
+        transform: scale(.8);
+    }
+    60% {
+        transform: scale(1.6);
+    }
+    to {
+        transform: scale(1);
+    }
 }
