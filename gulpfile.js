@@ -29,7 +29,10 @@ export const styles = () => {
 
 export const copy = () => {
     return gulp.src([
-            'src/images/**/*',
+            'src/images/app/**/image*.*',
+            'src/images/renders/**/*',
+            'src/images/title.svg',
+            'src/images/favicon/favicon.ico',
         ], {
             base: 'src'
         })
