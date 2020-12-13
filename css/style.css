@@ -25,25 +25,45 @@ body {
 
     color: white;
     font-family: 'Architects Daughter', cursive;
-    /* font-family: Kalam; */
 }
 
 main {
     padding: 3em;
 }
 
+/* header */
+
 header {
     color: #1b0202;
+    text-align: center;
 }
-
-/* h1 {
-    font-size: 3em;
-    text-shadow: 1px 1px 1px #9f9db1;
-} */
 
 #title {
     transition: 3s filter;
     filter: grayscale(100%);
+    width: 75%;
+    max-height: 300px;
+}
+
+header p {
+    padding-bottom: 1em;
+}
+
+/* countdown and final text */
+
+.countdown-wrap {
+    position: relative;
+    height: 3.4em;
+    display: grid;
+    place-items: center;
+}
+
+#countdown {
+    padding-bottom: 0;
+    font-size: 1em;
+    color: white;
+    text-shadow: 1px 1px 1px #363636;
+    transition: 1s transform;
 }
 
 .thatsall {
@@ -54,9 +74,7 @@ header {
     display: none;
 }
 
-header p {
-    padding-bottom: 1em;
-}
+/* images */
 
 .container {
     margin-top: .4em;
@@ -76,39 +94,24 @@ header p {
     filter: none;
 }
 
-.normal {
+.state-normal {
     filter: grayscale(100%);
     animation: hide-card 2s;
 }
 
-.popup {
+@keyframes hide-card {
+    20% {
+        transform: scale(.4);
+        opacity: .2s;
+    }
+    60% {
+        transform: scale(1.2);
+    }
+}
+
+.state-popup {
     transform: scale(1.2);
     filter: none;
 }
 
-.countdown-wrap {
-    position: relative;
-    height: 3.4em;
-    display: grid;
-    place-items: center;
-}
-
-#countdown {
-    padding-bottom: 0;
-    font-size: 1em;
-    color: white;
-    text-shadow: 1px 1px 1px #363636;
-    transition: 1s transform;
-}
-
-@keyframes hide-card {
-    20% {
-        transform: scale(.8);
-    }
-    60% {
-        transform: scale(1.6);
-    }
-    to {
-        transform: scale(1);
-    }
-}
+/* done */
