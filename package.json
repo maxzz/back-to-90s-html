@@ -2,15 +2,18 @@
     "name": "back-to-90s-html",
     "description": "A quick and easy project to keep old memories alive.",
     "version": "1.0.0",
+    "type": "module",
     "main": "index.js",
     "author": "Max Zakharzhevskiy <maxzz@msn.com>",
     "license": "MIT",
     "devDependencies": {
         "autoprefixer": "^9.8.0",
-        "browser-sync": "^2.26.7",
+        "browser-sync": "^2.26.13",
         "gulp": "^4.0.2",
-        "gulp-postcss": "^8.0.0",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-postcss": "^9.0.0",
         "gulp-replace": "^1.0.0",
-        "gulp-htmlmin": "^5.0.1"
+        "postcss": "^8.2.1",
+        "postcss-csso": "^5.0.0"
     }
 }

@@ -17,13 +17,13 @@ export const html = () => {
 };
 
 export const styles = () => {
-    return gulp.src('src/styles/index.css')
+    return gulp.src('src/css/style.css')
         .pipe(postcss([
             autoprefixer,
             csso,
         ]))
         //.pipe(replace(/\.\.\//g, ''))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/css'))
         .pipe(sync.stream());
 };
 
@@ -62,7 +62,7 @@ export const server = () => {
 };
 
 export const watch = () => {
-    gulp.watch('src/*.html', gulp.series(html, paths));
+    gulp.watch('src/*.html', gulp.series(html/*, paths*/));
     gulp.watch('src/styles/**/*.css', gulp.series(styles));
     gulp.watch([
         'src/images/**/*',
@@ -77,7 +77,7 @@ export default gulp.series(
         styles,
         copy,
     ),
-    paths,
+    //paths,
     gulp.parallel(
         watch,
         server,

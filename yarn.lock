@@ -389,7 +389,7 @@ browser-sync-ui@^2.26.13:
     socket.io-client "^2.0.4"
     stream-throttle "^0.1.3"
 
-browser-sync@^2.26.7:
+browser-sync@^2.26.13:
   version "2.26.13"
   resolved "https://registry.yarnpkg.com/browser-sync/-/browser-sync-2.26.13.tgz#a74541c104aec7eda318a5d8abdb3317ae9eda3d"
   integrity sha512-JPYLTngIzI+Dzx+StSSlMtF+Q9yjdh58HW6bMFqkFXuzQkJL8FCvp4lozlS6BbECZcsM2Gmlgp0uhEjvl18X4w==
@@ -814,6 +814,21 @@ cosmiconfig@^5.0.0:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
+css-tree@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.1.2.tgz#9ae393b5dafd7dae8a622475caec78d3d8fbd7b5"
+  integrity sha512-wCoWush5Aeo48GLhfHPbmvZs59Z+M7k5+B1xDnXbdWNcEF423DoFdqSWE0PM5aNk5nI5cp1q7ms36zGApY/sKQ==
+  dependencies:
+    mdn-data "2.0.14"
+    source-map "^0.6.1"
+
+csso@^4.0.2:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/csso/-/csso-4.2.0.tgz#ea3a561346e8dc9f546d6febedd50187cf389529"
+  integrity sha512-wvlcdIbf6pwKEk7vHj8/Bkc0B4ylXZruLvOgs9doS5eOsOpuodOV2zJChSpkp+pRpYQLQMeF04nr3Z68Sta9jA==
+  dependencies:
+    css-tree "^1.1.2"
+
 d@1, d@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/d/-/d-1.0.1.tgz#8698095372d58dbee346ffd0c7093f99f8f9eb5a"
@@ -1190,7 +1205,7 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-fancy-log@^1.3.2:
+fancy-log@^1.3.2, fancy-log@^1.3.3:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/fancy-log/-/fancy-log-1.3.3.tgz#dbc19154f558690150a23953a0adbd035be45fc7"
   integrity sha512-k9oEhlyc0FrVh25qYuSELjr8oxsCoc4/LEZfg2iJJrfEk/tZL9bCoJE47gqAvI2m/AUjluCS4+3I0eTx8n3AEw==
@@ -1528,15 +1543,14 @@ gulp-htmlmin@^5.0.1:
     plugin-error "^1.0.1"
     through2 "^2.0.3"
 
-gulp-postcss@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/gulp-postcss/-/gulp-postcss-8.0.0.tgz#8d3772cd4d27bca55ec8cb4c8e576e3bde4dc550"
-  integrity sha512-Wtl6vH7a+8IS/fU5W9IbOpcaLqKxd5L1DUOzaPmlnCbX1CrG0aWdwVnC3Spn8th0m8D59YbysV5zPUe1n/GJYg==
+gulp-postcss@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/gulp-postcss/-/gulp-postcss-9.0.0.tgz#2ade18809ab475dae743a88bd6501af0b04ee54e"
+  integrity sha512-5mSQ9CK8salSagrXgrVyILfEMy6I5rUGPRiR9rVjgJV9m/rwdZYUhekMr+XxDlApfc5ZdEJ8gXNZrU/TsgT5dQ==
   dependencies:
-    fancy-log "^1.3.2"
+    fancy-log "^1.3.3"
     plugin-error "^1.0.1"
-    postcss "^7.0.2"
-    postcss-load-config "^2.0.0"
+    postcss-load-config "^2.1.1"
     vinyl-sourcemaps-apply "^0.2.1"
 
 gulp-replace@^1.0.0:
@@ -2195,6 +2209,11 @@ matchdep@^2.0.0:
     resolve "^1.4.0"
     stack-trace "0.0.10"
 
+mdn-data@2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
+  integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
+
 micromatch@^3.0.4, micromatch@^3.1.10, micromatch@^3.1.4:
   version "3.1.10"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-3.1.10.tgz#70859bc95c9840952f359a068a3fc49f9ecfac23"
@@ -2278,6 +2297,11 @@ nan@^2.12.1:
   version "2.14.2"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.2.tgz#f5376400695168f4cc694ac9393d0c9585eeea19"
   integrity sha512-M2ufzIiINKCuDfBSAUr1vWQ+vuVcA9kqx8JJUsbQi6yf1uGRyb7HfpdfUr5qLXf3B/t8dPvcjhKMmlfnP47EzQ==
+
+nanoid@^3.1.20:
+  version "3.1.20"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.20.tgz#badc263c6b1dcf14b71efaa85f6ab4c1d6cfc788"
+  integrity sha512-a1cQNyczgKbLX9jwbS/+d7W8fX/RfgYR7lVWwWOGIPNgK2m0MWvrGF6/m4kk6U3QcFMnZf3RIhL0v2Jgh/0Uxw==
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -2675,7 +2699,14 @@ posix-character-classes@^0.1.0:
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
-postcss-load-config@^2.0.0:
+postcss-csso@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-csso/-/postcss-csso-5.0.0.tgz#e2e2cce06608900a1d11f298693da1b4e45d8b8c"
+  integrity sha512-Y4PfUrVhg6CBLB9EUrHDI8zrSxZusxCPIfojrnKYBYgtBZI/89/WNTsRbsq0g3N7FqLotdy39qy9fdlCsKvWbg==
+  dependencies:
+    csso "^4.0.2"
+
+postcss-load-config@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/postcss-load-config/-/postcss-load-config-2.1.2.tgz#c5ea504f2c4aef33c7359a34de3573772ad7502a"
   integrity sha512-/rDeGV6vMUo3mwJZmeHfEDvwnTKKqQ0S7OHUi/kJvvtx3aWtyWG2/0ZWnzCt2keEclwN6Tf0DST2v9kITdOKYw==
@@ -2688,7 +2719,7 @@ postcss-value-parser@^4.1.0:
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.1.0.tgz#443f6a20ced6481a2bda4fa8532a6e55d789a2cb"
   integrity sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==
 
-postcss@^7.0.2, postcss@^7.0.32:
+postcss@^7.0.32:
   version "7.0.35"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.35.tgz#d2be00b998f7f211d8a276974079f2e92b970e24"
   integrity sha512-3QT8bBJeX/S5zKTTjTCIjRF3If4avAT6kqxcASlTWEtAFCb9NH0OUxNDfgZSWdP5fJnBYCMEWkIFfWeugjzYMg==
@@ -2696,6 +2727,15 @@ postcss@^7.0.2, postcss@^7.0.32:
     chalk "^2.4.2"
     source-map "^0.6.1"
     supports-color "^6.1.0"
+
+postcss@^8.2.1:
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.1.tgz#eabc5557c4558059b9d9e5b15bce7ffa9089c2a8"
+  integrity sha512-RhsqOOAQzTgh1UB/IZdca7F9WDb7SUCR2Vnv1x7DbvuuggQIpoDwjK+q0rzoPffhYvWNKX5JSwS4so4K3UC6vA==
+  dependencies:
+    colorette "^1.2.1"
+    nanoid "^3.1.20"
+    source-map "^0.6.1"
 
 pretty-hrtime@^1.0.0:
   version "1.0.3"
