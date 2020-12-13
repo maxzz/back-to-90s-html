@@ -15,5 +15,11 @@
         "gulp-replace": "^1.0.0",
         "postcss": "^8.2.1",
         "postcss-csso": "^5.0.0"
+    },
+    "scripts": {
+        "dev": "gulp",
+        "build": "gulp build",
+        "predeploy": "rm -rf dist && yarn build",
+        "deploy": "gh-pages -d dist"
     }
 }

@@ -54,6 +54,15 @@ export const paths = () => {
 };
 */
 
+export const build = gulp.series(
+    gulp.parallel(
+        html,
+        styles,
+        copy,
+    ),
+    //paths,
+);
+
 export const server = () => {
     sync.init({
         ui: false,
