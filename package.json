@@ -6,6 +6,12 @@
     "main": "index.js",
     "author": "Max Zakharzhevskiy <maxzz@msn.com>",
     "license": "MIT",
+    "scripts": {
+        "dev": "gulp",
+        "build": "gulp build",
+        "predeploy": "rm -rf dist && yarn build",
+        "deploy": "gh-pages -d dist"
+    },
     "devDependencies": {
         "autoprefixer": "^9.8.0",
         "browser-sync": "^2.26.13",
@@ -15,11 +21,5 @@
         "gulp-replace": "^1.0.0",
         "postcss": "^8.2.1",
         "postcss-csso": "^5.0.0"
-    },
-    "scripts": {
-        "dev": "gulp",
-        "build": "gulp build",
-        "predeploy": "rm -rf dist && yarn build",
-        "deploy": "gh-pages -d dist"
     }
 }
