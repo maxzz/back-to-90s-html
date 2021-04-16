@@ -75,10 +75,8 @@ export const server = () => {
 
 export const watch = () => {
     gulp.watch('src/*.html', gulp.series(html/*, paths*/));
-    gulp.watch('src/styles/**/*.css', gulp.series(styles));
-    gulp.watch([
-        'src/images/**/*',
-    ], gulp.series(copy));
+    gulp.watch('src/css/**/*.css', gulp.series(styles));
+    gulp.watch(['src/images/**/*', ], gulp.series(copy));
 };
 
 // Default
